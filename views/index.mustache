@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Albums</title>
+  </head>
+  <body>
+    <h2>My album collection:</h2>
+     {{#album}}
+     <div>
+      <b>Artist:</b> {{artist}}
+      <b>Album:</b> {{name}}
+      <b>Year:</b> {{year}}
+      <b>Genres:</b> {{#genres}}
+        {{genre1}},
+        {{genre2}},
+        {{genre3}}
+      {{/genres}}
+      </div>
+    {{/album}}
+    <h3>Add an album:</h3>
+    <div>
+    <form action="/" method="post">
+      <input type="text" name="artist" placeholder="Artist name">
+      <input type="text" name="name" placeholder="Album name">
+      <input type="text" name="year" placeholder="Album year">
+      <input type="text" name="genre1" placeholder="Add genres (optional)">
+      <input type="text" name="genre2" placeholder="Add genres (optional)">
+      <input type="text" name="genre3" placeholder="Add genres (optional)">
+      <button type="submit">Add album</button>
+    </form>
+  </div>
+  </body>
+</html>
